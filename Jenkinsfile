@@ -4,7 +4,7 @@ pipeline{
 				stage("clean up"){
 									steps{
 									bat 'del /q *'
-									for /d %x in (*) do @rd /s /q "%x"
+									bat 'for /d %x in (*) do @rd /s /q "%x"'
 									}
 				}
 				stage("build"){
