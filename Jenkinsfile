@@ -3,8 +3,7 @@ pipeline{
 		stages{
 				stage("clean up"){
 									steps{
-									bat 'del /q *'
-									bat 'for /d %x in (*) do @rd /s /q "%x"'
+									bat 'mvn clean'
 									}
 				}
 				stage("build"){
